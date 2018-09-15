@@ -61,6 +61,7 @@ def all_supplies_in_holidays(holiday_hash)
     v.each do |l,w|
       # don't really like that I had to resort to using something I haven't learned on the learn.co platform yet to solve this. (.map(&:capitalize) <--- never used this syntax before 
       # will return to this if I find another way
+      # titleize seems to be a rails only method?
       puts "  " + l.to_s.gsub("_", " ").split.map(&:capitalize).join(' ') + ": " + w.join(", ")
     end
   end
